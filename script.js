@@ -33,8 +33,7 @@ var beweegAlles = function () {
   // kogel
 
   // speler
-var beweegSpeler = function() { 
-
+  var beweegSpeler = function() { 
 if (keyIsDown (KEY_RIGHT)) {
   spelerX = spelerX + 20;
 }
@@ -77,11 +76,9 @@ var tekenAlles = function () {
   // kogel
 
   // speler
- var tekenSpeler = function(x, y) {
-  fill("white");
-  ellipse(x, y, 100, 100);
-};
 
+  fill("white");
+  rect(spelerX - 25, spelerY - 25, 50, 50);
   // punten en health
 
 };
