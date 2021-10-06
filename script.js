@@ -13,7 +13,10 @@
 const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
-
+var KeyIsDown
+const KEY_RIGHT = 39;
+const KEY_LEFT = 37;
+const KEY_UP = 38;
 var spelerX = 600; // x-positie van speler
 var spelerY = 600; // y-positie van speler
 
@@ -30,7 +33,25 @@ var beweegAlles = function () {
   // kogel
 
   // speler
+var beweegSpeler = function() { 
 
+if (keyIsDown (KEY_RIGHT)) {
+  spelerX = spelerX + 20;
+}
+
+if (keyIsDown (KEY_LEFT)) {
+  spelerX = spelerX - 20;
+}
+if (keyIsDown (KEY_UP)) {
+  spelerY = spelerY - 20;
+}
+  if (!keyIsDown(KEY_UP)) {
+    spelerY = spelerY + 60;
+    //  spelerX = spelerX - 40;
+    if (spelerY > 650) { spelerY = 650 };
+  }
+
+};
 };
 
 /**
@@ -56,10 +77,10 @@ var tekenAlles = function () {
   // kogel
 
   // speler
+ var tekenSpeler = function(x, y) {
   fill("white");
-  rect(spelerX - 25, spelerY - 25, 50, 50);
-  fill("black");
-  ellipse(spelerX, spelerY, 10, 10);
+  ellipse(x, y, 100, 100);
+};
 
   // punten en health
 
