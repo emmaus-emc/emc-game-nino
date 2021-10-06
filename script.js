@@ -33,24 +33,24 @@ var beweegAlles = function () {
   // kogel
 
   // speler
-  var beweegSpeler = function() { 
-if (keyIsDown (KEY_RIGHT)) {
-  spelerX = spelerX + 20;
-}
 
-if (keyIsDown (KEY_LEFT)) {
-  spelerX = spelerX - 20;
-}
-if (keyIsDown (KEY_UP)) {
-  spelerY = spelerY - 20;
-}
+  if (keyIsDown(KEY_RIGHT)) {
+  
+    spelerX = spelerX + 20;
+  }
+
+  if (keyIsDown(KEY_LEFT)) {
+    spelerX = spelerX - 20;
+  }
+  if (keyIsDown(KEY_UP)) {
+    spelerY = spelerY - 20;
+  }
   if (!keyIsDown(KEY_UP)) {
     spelerY = spelerY + 60;
     //  spelerX = spelerX - 40;
     if (spelerY > 650) { spelerY = 650 };
   }
 
-};
 };
 
 /**
